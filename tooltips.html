@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>
+        Tooltips &middot; NIA
+    </title>
+
+
+    <!--STANDARD RESPONSIV WRAPPER -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Wrapper" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://localhost:35729/livereload.js"></script>
+
+    <!-- JQUERY 1.11  AND NI.JS CONTAIN LOADER AND NAME-->
+    <script src="//www-dev.ni.com/niassets/jquery/js/jquery.min.js"></script>
+    <!--  we need these patches because things like auto-complete, global gateway and UP use them -->
+    <script src="//www-dev.ni.com/niassets/jquery/js/jquery-migrate-1.2.1.min.js"></script>
+
+    <link rel="stylesheet" href="/niassets/nia/css/breadcrumb.css">
+    <link rel="stylesheet" href="/niassets/nia/css/typography_styles.css">
+    <link rel="stylesheet" href="/niassets/nia/css/progress-bar.css">
+    <link rel="stylesheet" href="/niassets/nia/css/container.css">
+    <link rel="stylesheet" href="/niassets/nia/css/product-display.css">
+    <link rel="stylesheet" href="/niassets/nia/css/notification.css">
+    <link rel="stylesheet" href="/niassets/nia/css/multiselect.css">
+    <link rel="stylesheet" href="/niassets/nia/css/flexslider.css">
+    <link rel="stylesheet" href="/niassets/nia/css/label.css">
+	<link rel="stylesheet" href="/niassets/nia/css/password-strength-meter.css">
+    <link rel="stylesheet" href="/niassets/nia/css/hotspots.css">
+    <link rel="stylesheet" href="/niassets/nia/css/forms.css">
+    <link rel="stylesheet" href="/niassets/nia/css/card-date.css">
+    <link rel="stylesheet" href="/niassets/nia/css/table.css">
+    <link rel="stylesheet" href="/niassets/nia/css/pagination.css">
+    <link rel="stylesheet" href="/niassets/nia/css/mini-shopping-cart.css">
+    <link rel="stylesheet" href="/niassets/nia/css/skeleton-screens.css">
+    <link rel="stylesheet" href="/niassets/nia/css/show-hide-password.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/niassets/nia/css/hyperlink.css">
+    <link rel="stylesheet" href="/niassets/nia/css/cta-button.css">
+    <link rel="stylesheet" href="/niassets/nia/css/tabs.css">
+    <link rel="stylesheet" href="/niassets/nia/css/accordions.css">
+    <link rel="stylesheet" href="/niassets/nia/css/page-level-search.css">
+    <link rel="stylesheet" href="/niassets/nia/css/global-search.css">
+    <link rel="stylesheet" href="/niassets/nia/css/search-utility-bar.css">
+    <link rel="stylesheet" href="/niassets/nia/css/loading-spinner.css">
+    <link rel="stylesheet" href="/niassets/nia/css/character-counter.css">
+    <link rel="stylesheet" href="/niassets/nia/css/search-results.css">
+	<link rel="stylesheet" href="/niassets/nia/css/field-label.css">
+    <link rel="stylesheet" href="/niassets/nia/css/text-field.css">
+    <link rel="stylesheet" href="/niassets/nia/css/optional-field-label.css">
+    <link rel="stylesheet" href="/niassets/nia/css/example-text.css">
+    <link rel="stylesheet" href="/niassets/nia/css/field-validation.css">
+    <link rel="stylesheet" href="/niassets/nia/css/highlight.css">
+    <link rel="stylesheet" href="/niassets/nia/css/related-content.css">
+    <link rel="stylesheet" href="/niassets/nia/css/video-card.css">
+     <link rel="stylesheet" href="/niassets/nia/css/chat.css">
+    <!-- LATEST COMPILED AND MINIFIED BOOTSTRAP CSS & JS -->
+    <link rel="stylesheet" href="//www-dev.ni.com/niassets/bootstrap/css/bootstrap.min.css">
+    <script src="//www-dev.ni.com/niassets/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/niassets/nia/css/tooltip.css">
+    <link rel="stylesheet" href="/niassets/nia/css/helper-for-testing.css">
+    <link rel="stylesheet" href="//www-dev.ni.com/niassets/flexslider/2.6/flexslider.css" />
+
+    <!-- jQuery UI -->
+    <link rel="stylesheet" type="text/css" href="//www-dev.ni.com/niassets/jquery/jqueryui/css/jquery-ui.min.css">
+    <script src="//www-dev.ni.com/niassets/jquery/jqueryui/js/jquery-ui.min.js"></script>
+
+    <script src="//www-dev.ni.com/niassets/jquery/js/ni.js"></script>
+
+    <!--CSS for wrapper-->
+
+    <!--FONT STYLE FOR DEFAULT-->
+    <link href="//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic&amp;subset=latin,greek,greek-ext,latin-ext" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="//www-dev.ni.com/niassets/wrapper/css/main-structure.css">
+    <link rel="stylesheet" type="text/css" href="//www-dev.ni.com/niassets/wrapper/css/logo.css">
+    <link rel="stylesheet" type="text/css" href="//www-dev.ni.com/niassets/wrapper/css/navBar.css">
+    <link rel="stylesheet" type="text/css" href="//www-dev.ni.com/niassets/wrapper/css/cart.css">
+    <link rel="stylesheet" type="text/css" href="//www-dev.ni.com/niassets/wrapper/css/myAccount.css">
+    <link rel="stylesheet" type="text/css" href="//www-dev.ni.com/niassets/wrapper/css/global-gateway.css">
+    <link rel="stylesheet" type="text/css" href="//www-dev.ni.com/niassets/wrapper/css/search.css">
+    <link rel="stylesheet" type="text/css" href="//www-dev.ni.com/niassets/wrapper/css/footer.css">
+    <link rel="stylesheet" type="text/css" href="//www-dev.ni.com/niassets/css/ni.css">
+    <link rel="stylesheet" type="text/css" href="//www-dev.ni.com/niassets/autocomplete/css/jqueryui.autocomplete.css">
+    <!--JS FOR WRAPPER-->
+    <script type="text/javascript" src="//www-dev.ni.com/niassets/js/jquery.multiselect.min.js"></script>
+
+    <script src="//www-dev.ni.com/niassets/wrapper/js/utils.js"></script>
+    <script src="//www-dev.ni.com/niassets/wrapper/js/up-data-dt.js"></script>
+    <script src="//www-dev.ni.com/niassets/wrapper/js/wrapper.js"></script>
+    <script src="//www-dev.ni.com/niassets/wrapper/js/cartCount.js"></script>
+    <script src="//www-dev.ni.com/niassets/wrapper/js/cookielaw.js"></script>
+    <script src="//www-dev.ni.com/niassets/jquery/js/jquery.accordion.js"></script>
+
+    <!--JS FOR AUTOCOMPLETE-->
+    <script src="//www-dev.ni.com/niassets/jquery/js/jquery.cookie.js"></script>
+    <script src="//www-dev.ni.com/niassets/autocomplete/js/pnx.autocomplete.js"></script>
+    <script src="//www-dev.ni.com/niassets/js/jquery.dotdotdot.min.js"></script>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/niassets/nia/img/apple-touch-icon-precomposed.png">
+    <link rel="icon" href="/niassets/nia/img/favicon.ico">
+
+    <script type="text/javascript" src="//www-dev.ni.com/niassets/flexslider/2.6/jquery.flexslider.js"></script>
+
+    <style>
+        .nia-local-nav {
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- outer wrap -->
+    <div class="ni-page-wrap">
+
+
+        <div class="ni-wrapper-header noindex">
+            <nav class="header-skinny navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="row">
+
+                        <div class="ni_logo col-md-1 col-xs-1">
+                            <a href="http://www.ni.com/en-us.html" class="navbar-brand"></a>
+                        </div>
+
+                        <div class="nia-local-nav pull-right">
+
+
+                            <ul class="nav nav-pills" role="tablist">
+
+                                <li role="presentation"  >
+                                    <a href="/niassets/nia/index.html">Overview</a>
+                                </li>
+
+                                <li role="presentation"  >
+                                    <a href="/niassets/nia/changelog.html">Changelog</a>
+                                </li>
+
+                                <li role="presentation" >
+                                    <a href="/niassets/nia/current-version.html">Version 1.0.0</a>
+                                </li>
+
+                                <li role="presentation" class="dropdown  ">
+                                    <a id="drop4" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> CSS <span class="caret"></span>
+                                </a>
+                                    <ul id="menu1" class="dropdown-menu" aria-labelledby="drop4">
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/breadcrumb">
+                                          Breadcrumb
+                                        </a></li>
+                                        
+                                      
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/captions">
+                                          Captions
+                                        </a></li>
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/check-boxes">
+                                          Check Boxes
+                                        </a></li>
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/color-palette">
+                                          Color Palette
+                                        </a></li>
+                                        
+                                      
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/container">
+                                          Container
+                                        </a></li>
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/ctas">
+                                          CTAs
+                                        </a></li>
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/example-text">
+                                          Example Text
+                                        </a></li>
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/expand-collapse-row">
+                                          Expand Collapse Row
+                                        </a></li>
+                                        
+                                      
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/feature">
+                                          Feature
+                                        </a></li>
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/field-label">
+                                          Field Label
+                                        </a></li>
+                                        
+                                      
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/footnotes">
+                                          Footnotes
+                                        </a></li>
+                                        
+                                      
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/forms">
+                                          Forms
+                                        </a></li>
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/grid-system">
+                                          Grid System
+                                        </a></li>
+                                        
+                                      
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/helper-classes">
+                                          Helper Classes
+                                        </a></li>
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/highlight">
+                                          Highlight
+                                        </a></li>
+                                        
+                                      
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/hyperlink">
+                                          Hyperlink
+                                        </a></li>
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/iconography">
+                                          Iconography
+                                        </a></li>
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/image-types">
+                                          Image Types
+                                        </a></li>
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/notifications">
+                                          Notifications
+                                        </a></li>
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/optional-field-label">
+                                          Optional Field Label
+                                        </a></li>
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/overview">
+                                          Overview
+                                        </a></li>
+                                        
+                                      
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/page-tools">
+                                          Page Tools
+                                        </a></li>
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/print">
+                                          Print
+                                        </a></li>
+                                        
+                                      
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/progress-bar">
+                                          Progress Bar
+                                        </a></li>
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/radio-buttons">
+                                          Radio Buttons
+                                        </a></li>
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/scaffolding">
+                                          Scaffolding
+                                        </a></li>
+                                        
+                                      
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/search-results">
+                                          Search Results
+                                        </a></li>
+                                        
+                                      
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/share">
+                                          Share
+                                        </a></li>
+                                        
+                                      
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/skeleton-screens">
+                                          Skeleton Screens
+                                        </a></li>
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/spacing">
+                                          Spacing
+                                        </a></li>
+                                        
+                                      
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/summary-widget">
+                                          Summary Widget
+                                        </a></li>
+                                        
+                                      
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/table">
+                                          Table
+                                        </a></li>
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/text-field">
+                                          Text Field
+                                        </a></li>
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/text-link-legend">
+                                          Text Link Legend
+                                        </a></li>
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/typography">
+                                          Typography
+                                        </a></li>
+                                        
+                                      
+                                        
+                                      
+                                        
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/cssdata/video-card">
+                                          Video Card
+                                        </a></li>
+                                        
+                                      
+                                    </ul>
+                                </li>
+
+                                <li role="presentation" class="dropdown "> <a id="drop5" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Javascript <span class="caret"></span> </a>
+                                    <ul id="menu2" class="dropdown-menu" aria-labelledby="drop5">
+                                      
+                                        
+                                        
+                                        
+                                          <li><a class="menu-item
+                                            "
+                                            href="/niassets/nia/javascriptdata/accordions">
+                                            Accordions
+                                          </a></li>
+                                          
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                          <li><a class="menu-item
+                                            "
+                                            href="/niassets/nia/javascriptdata/brightcove">
+                                            Brightcove
+                                          </a></li>
+                                          
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                          <li><a class="menu-item
+                                            "
+                                            href="/niassets/nia/javascriptdata/character-counter">
+                                            Character Counter
+                                          </a></li>
+                                          
+                                        
+                                        
+                                          <li><a class="menu-item
+                                            "
+                                            href="/niassets/nia/javascriptdata/chat">
+                                            Chat
+                                          </a></li>
+                                          
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                          <li><a class="menu-item
+                                            "
+                                            href="/niassets/nia/javascriptdata/dropdown-list">
+                                            Dropdown List
+                                          </a></li>
+                                          
+                                        
+                                        
+                                          <li><a class="menu-item
+                                            "
+                                            href="/niassets/nia/javascriptdata/dropdown-menu">
+                                            Dropdown Menu
+                                          </a></li>
+                                          
+                                        
+                                        
+                                          <li><a class="menu-item
+                                            "
+                                            href="/niassets/nia/javascriptdata/event-manager">
+                                            Event Manager
+                                          </a></li>
+                                          
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                          <li><a class="menu-item
+                                            "
+                                            href="/niassets/nia/javascriptdata/field-validation">
+                                            Field Validation
+                                          </a></li>
+                                          
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                          <li><a class="menu-item
+                                            "
+                                            href="/niassets/nia/javascriptdata/global-gateway">
+                                            Global Gateway
+                                          </a></li>
+                                          
+                                        
+                                        
+                                          <li><a class="menu-item
+                                            "
+                                            href="/niassets/nia/javascriptdata/global-search">
+                                            Global Search
+                                          </a></li>
+                                          
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                          <li><a class="menu-item
+                                            "
+                                            href="/niassets/nia/javascriptdata/hotspots">
+                                            Hotspots
+                                          </a></li>
+                                          
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                          <li><a class="menu-item
+                                            "
+                                            href="/niassets/nia/javascriptdata/loading-spinner">
+                                            Loading Spinner
+                                          </a></li>
+                                          
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                          <li><a class="menu-item
+                                            "
+                                            href="/niassets/nia/javascriptdata/modals">
+                                            Modals
+                                          </a></li>
+                                          
+                                        
+                                        
+                                          <li><a class="menu-item
+                                            "
+                                            href="/niassets/nia/javascriptdata/my-account">
+                                            My Account
+                                          </a></li>
+                                          
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                          <li><a class="menu-item
+                                            "
+                                            href="/niassets/nia/javascriptdata/overview">
+                                            Overview
+                                          </a></li>
+                                          
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                          <li><a class="menu-item
+                                            "
+                                            href="/niassets/nia/javascriptdata/password-strength-meter">
+                                            Password Strength Meter
+                                          </a></li>
+                                          
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                          <li><a class="menu-item
+                                            "
+                                            href="/niassets/nia/javascriptdata/read-more-&-less">
+                                            Read More & Less
+                                          </a></li>
+                                          
+                                        
+                                        
+                                          <li><a class="menu-item
+                                            "
+                                            href="/niassets/nia/javascriptdata/related-content">
+                                            Related Content
+                                          </a></li>
+                                          
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                          <li><a class="menu-item
+                                            "
+                                            href="/niassets/nia/javascriptdata/search-box---page-level">
+                                            Search Box - Page Level
+                                          </a></li>
+                                          
+                                        
+                                        
+                                        
+                                        
+                                          <li><a class="menu-item
+                                            "
+                                            href="/niassets/nia/javascriptdata/search-utility-bar">
+                                            Search Utility Bar
+                                          </a></li>
+                                          
+                                        
+                                        
+                                        
+                                        
+                                          <li><a class="menu-item
+                                            "
+                                            href="/niassets/nia/javascriptdata/show-hide-password">
+                                            Show Hide Password
+                                          </a></li>
+                                          
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                          <li><a class="menu-item
+                                            "
+                                            href="/niassets/nia/javascriptdata/tab">
+                                            Tab
+                                          </a></li>
+                                          
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                          <li><a class="menu-item
+                                            "
+                                            href="/niassets/nia/javascriptdata/tooltips-&-overlays">
+                                            Tooltips & Overlays
+                                          </a></li>
+                                          
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </ul>
+                                </li>
+
+                                <li role="presentation" class="dropdown "> <a id="drop5" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Modules <span class="caret"></span> </a>
+                                    <ul id="menu3" class="dropdown-menu" aria-labelledby="drop5">
+                                        
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/modulesdata/card">
+                                          Card
+                                        </a></li>
+                                        
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/modulesdata/feature-lead-space">
+                                          Feature Lead Space
+                                        </a></li>
+                                        
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/modulesdata/mini-shopping-cart">
+                                          Mini Shopping Cart
+                                        </a></li>
+                                        
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/modulesdata/pagination">
+                                          Pagination
+                                        </a></li>
+                                        
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                        <li><a class="menu-item
+                                          "
+                                          href="/niassets/nia/modulesdata/product-listing">
+                                          Product Listing
+                                        </a></li>
+                                        
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                          
+                                      
+                                    </ul>
+                                </li>
+
+                                <li role="presentation" class="dropdown "> <a id="drop5" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Thid Party <span class="caret"></span> </a>
+                                    <ul id="menu3" class="dropdown-menu" aria-labelledby="drop6">
+                                                           
+                                        <li><a class="menu-item
+                      " href="/niassets/nia/thirdpartydata/carousel">
+                      Carousel
+                    </a></li>
+                                                                                            
+                                        <li><a class="menu-item
+                      " href="/niassets/nia/thirdpartydata/google-maps-api">
+                      Google Maps API
+                    </a></li>
+                                                                                                                                             
+                                    </ul>
+                                </li>
+
+                                <li  role="presentation" >
+                                    <a href="/niassets/nia/about.html">About</a>
+                                </li>
+
+                            </ul>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+        
+
+        <div class="container-fluid">
+            <div class="columns docs-layout">
+  <div class="one-fourth column">
+    
+      <nav class="menu docs-menu">
+  <a class="menu-item " href="/niassets/nia/css-overview/">
+    Overview
+  </a>
+  <a class="menu-item " href="/niassets/nia/scaffolding/">
+    Scaffolding
+  </a>
+  <a class="menu-item " href="/niassets/nia/layout/">
+    Layout
+  </a>
+  <a class="menu-item " href="/niassets/nia/type/">
+    Type
+  </a>
+  <a class="menu-item " href="/niassets/nia/buttons/">
+    Buttons
+  </a>
+  <a class="menu-item " href="/niassets/nia/forms/">
+    Forms
+  </a>
+  <a class="menu-item " href="/niassets/nia/nav/">
+    Navigation
+  </a>
+  <a class="menu-item " href="/niassets/nia/alerts/">
+    Alerts
+  </a>
+  <a class="menu-item " href="/niassets/nia/blankslate/">
+    Blankslate
+  </a>
+  <a class="menu-item " href="/niassets/nia/avatars/">
+    Avatars
+  </a>
+  <a class="menu-item " href="/niassets/nia/states/">
+    States
+  </a>
+  <a class="menu-item selected" href="/niassets/nia/tooltips/">
+    Tooltips
+  </a>
+  <a class="menu-item " href="/niassets/nia/utilities/">
+    Utilities
+  </a>
+</nav>
+
+<nav class="menu docs-menu">
+  <a class="menu-item " href="/niassets/nia/guidelines/">
+    Code guidelines
+  </a>
+  <a class="menu-item " href="/niassets/nia/colors/">
+    Colors
+  </a>
+  <a class="menu-item " href="/niassets/nia/markdown/">
+    Markdown
+  </a>
+</nav>
+
+    
+  </div>
+  <div class="three-fourths column markdown-body">
+    <h1 class="page-title">
+      Tooltips
+    </h1>
+    <div class="markdown-body">
+      <p>Add tooltips built entirely in CSS to nearly any element. Just add a few classes and an <code class="highlighter-rouge">aria-label</code> attribute.</p>
+
+<p>In addition, you’ll want to specify a direction:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">.tooltipped-n</code></li>
+  <li><code class="highlighter-rouge">.tooltipped-ne</code></li>
+  <li><code class="highlighter-rouge">.tooltipped-e</code></li>
+  <li><code class="highlighter-rouge">.tooltipped-se</code></li>
+  <li><code class="highlighter-rouge">.tooltipped-s</code></li>
+  <li><code class="highlighter-rouge">.tooltipped-sw</code></li>
+  <li><code class="highlighter-rouge">.tooltipped-w</code></li>
+  <li><code class="highlighter-rouge">.tooltipped-nw</code></li>
+</ul>
+
+<p>Remember, <code class="highlighter-rouge">aria-label</code> and tooltip classes must go directly on <code class="highlighter-rouge">&lt;button&gt;</code> and <code class="highlighter-rouge">&lt;a&gt;</code> elements. Tooltip classes also conflict with Octicon classes, and as such, must go on a parent element instead of the icon.</p>
+
+<div class="docs-example clearfix ni-margin-2x"><span class="tooltipped tooltipped-n" aria-label="This is the tooltip.">
+  Text with a tooltip
+</span></div>
+<div class="view-code"><div><a class="btn btn-info expander ni-margin-2x" role="button" href="#">View Code</a></div><div class="highlight content"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tooltipped tooltipped-n"</span> <span class="na">aria-label=</span><span class="s">"This is the tooltip."</span><span class="nt">&gt;</span>
+  Text with a tooltip
+<span class="nt">&lt;/span&gt;</span></code></pre></div></div>
+
+
+    </div>
+  </div>
+</div>
+
+        </div>
+
+
+
+        <!-- FOOTER -->
+        <footer class="footer-skinny noindex">
+            <div class="container-fluid">
+                <div class="row clearfix" >
+
+                    <!-- FOOTER DESKTOP-->
+                    <div class="hidden-xs hidden-sm col-md-10 col-md-push-1 col-md-pull-1 col-lg-10 col-lg-push-1 col-lg-pull-1 copy">
+
+                        Created and maintained by the CXD team at National Instruments. <strong>Currently v1.0.0.</strong><br />
+                        <!--Legal component -->
+                        <a href="http://www.ni.com/legal/">Legal</a>
+                        <span class="pipe">|</span>
+                        &copy 2018 Copyright National Instruments. All rights reserved.
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+
+
+        <script src="/niassets/nia/js/anchor.min.js"></script>
+        <script src="/niassets/nia/js/progress-bar.min.js"></script>
+        <script src="/niassets/nia/js/show-more.min.js"></script>
+        <script src="/niassets/nia/js/tooltip.js"></script>
+        <script src="/niassets/nia/js/multiselect.js"></script>
+        <script src="/niassets/nia/js/location-autofill.js"></script>
+        <script src="/niassets/nia/js/googlemapsdemo.js"></script>
+        <script src="/niassets/nia/js/flexslider-demo.js"></script>
+        <script src="/niassets/nia/js/simple-expand.js"></script>
+        <script src="/niassets/nia/js/show-hide-password.js"></script>
+        <script src="/niassets/nia/js/tab.js"></script>
+        <script src="/niassets/nia/js/accordions.js"></script>
+        <script src="/niassets/nia/js/page-level-search.js"></script>
+        <script src="/niassets/nia/js/global-search.js"></script>
+        <script src="/niassets/nia/js/search-utility-bar.js"></script>
+        <script type="text/javascript" src="http://www-dev.ni.com/niassets/js/spin.min.js"></script>
+        <script src="/niassets/nia/js/loading-spinner.js"></script>
+        <script src="/niassets/nia/js/character-counter.js"></script>
+		<script src="/niassets/nia/js/hotspots.js"></script>
+    	<script src="/niassets/nia/js/field-validation.js"></script>
+    	<script src="/niassets/nia/js/password-strength-meter.js"></script>
+    	<script src="/niassets/nia/js/related-content.js"></script>
+     <script src="/niassets/nia/js/chat.js"></script>
+        <script>
+            var selector = '.markdown-body h2, .markdown-body h3';
+            anchors.options = {
+                placement: 'left',
+                class: 'anchor-link'
+            };
+            anchors.add(selector);
+            initializeNIATooltips();
+
+            $('.expander').simpleexpand();
+        </script>
+        
+      
+
+
+        <!-- Google API -->
+        <!--<script type="text/javascript" src="//maps.google.cn/maps/api/js?key=AIzaSyDHC004A4mVFycRoE8VNFfG6CmQDzd4eVk&libraries=places&callback=initDemoNIAutocomplete"></script>-->
+
+</body>
+</html>
